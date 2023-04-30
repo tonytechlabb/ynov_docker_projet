@@ -1,6 +1,12 @@
 # ynov_docker_projet
 
-Here is my repository for my Sonar app.
+## What is requested
+
+- Un docker-compose qui a au moins 2 services qui communiquent
+- Une image Docker customisé qui vient de votre compte Docker Hub (ou tous mais au moins un)
+    - L'image contient un entrypoint custom
+- Au moins un volume partagé avec la machine hôte pour pouvoir garder un état si on éteint et redémarre le docker-compose
+- Des variables d'environnement pris en compte dans le container (dans le entrypoint ou par example pour connecter le back à la base de données)
 
 ## How it works
 
@@ -20,5 +26,7 @@ and run the following docker command :
 `docker run -p 9000:9000 tonytechlab/sonarqube`
 
 You can now access your Sonar app by hitting your local address on port 9000.
+
+As requested by the project, I had to implement a customized Docker image. So I created one named "tonytechlab/myalpine" which is available on my dockerhub, and it will be linked to an entrypoint.sh file that will show the current date. To do so, build my image `docker build -t tonytechlab/myalpine`, then run it `docker run tonytechlab/myalpine time` (ps : it requires the `time` parameter to show the current date).
 
 Enjoy.
