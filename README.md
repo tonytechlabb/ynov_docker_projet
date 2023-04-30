@@ -27,6 +27,6 @@ and run the following docker command :
 
 You can now access your Sonar app by hitting your local address on port 9000.
 
-As requested by the project, I had to implement a customized Docker image. So I created one named "tonytechlab/myalpine" which is available on my dockerhub, and it will be linked to an entrypoint.sh file that will show the current date. To do so, build my image `docker build -t tonytechlab/myalpine`, then run it `docker run tonytechlab/myalpine time` (ps : it requires the `time` parameter to show the current date).
+As requested by the project, I had to implement a customized Docker image. So I created one named "tonytechlab/myalpine" which is available on my dockerhub, and it will be linked to an entrypoint.sh file that will show the current date. To do so, pull the image `docker pull tonytechlab/myalpine`, then run it `docker run tonytechlab/myalpine time` (ps : it requires the `time` parameter to show the current date).
 
 Enjoy.
